@@ -7,39 +7,40 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/contact_list_floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/contacts_list_floating_button_mrg_btm"
         android:clickable="true"
+        app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_circle_24" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/til_num_sv"
-        android:layout_width="@dimen/save_contact_dec_phone_img_size"
-        android:layout_height="@dimen/save_contact_dec_phone_img_size"
-        android:layout_margin="@dimen/main_page_contacts_button_mrg_size"
+    <SearchView
+        android:id="@+id/contact_list_til_num_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/contact_list_bg_drawable"
+        android:hint="@string/phone_number_sv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_perm_contact_calendar_24" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/item_from_database_rv"
+        android:id="@+id/contact_list_item_from_phone_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:paddingVertical="@dimen/contacts_list_rv_padding_vertical"
-        app:layout_constraintBottom_toTopOf="@+id/snackbar_action"
+        app:layout_constraintBottom_toTopOf="@+id/contact_list_snackbar_action"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_num_sv" />
+        app:layout_constraintTop_toBottomOf="@id/contact_list_til_num_sv" />
 
     <TextView
-        android:id="@+id/snackbar_action"
+        android:id="@+id/contact_list_snackbar_action"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

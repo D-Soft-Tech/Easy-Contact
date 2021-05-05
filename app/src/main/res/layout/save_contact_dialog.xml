@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/save_contact_heading_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:orientation="vertical"
+        android:paddingVertical="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/save_contact_heading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/contact_list_heading_tv_text_size"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/abril_fatface"
+            android:text="@string/contact_list_heading_tv"
+            android:textColor="@color/white" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/save_contact_user_image_iv"
+            android:layout_width="@dimen/save_contact_user_image_size"
+            android:layout_height="@dimen/save_contact_user_image_size"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_margin="@dimen/save_contact_user_image_margin_vertical"
+            app:civ_border_color="@color/white"
+            android:clickable="true"
+            app:civ_border_width="@dimen/save_contact_usr_img_border_width"
+            android:src="@drawable/ic_baseline_person_24"
+            tools:ignore="VectorDrawableCompat"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/save_contact_phone_dec_icon"
+        android:layout_width="@dimen/save_contact_dec_phone_img_size"
+        android:layout_height="@dimen/save_contact_dec_phone_img_size"
+        android:backgroundTint="@color/teal_700"
+        android:rotation="@dimen/save_contact_dec_phone_rotation"
+        android:src="@drawable/ic_baseline_phone_iphone_24"
+        app:civ_border_color="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352"
+        tools:ignore="VectorDrawableCompat" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/save_contact_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/save_contact_user_name_til_mrg_top"
+        android:layout_marginHorizontal="@dimen/save_contact_dec_phone_img_size"
+        android:hint="@string/save_contact_user_name_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_contact_phone_dec_icon"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/save_contact_user_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/save_contact_dec_phone_img_size"
+        android:layout_marginTop="@dimen/save_contact_user_name_til_mrg_top"
+        android:hint="@string/save_contact_til_phone_number_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_contact_user_name"
+        app:startIconDrawable="@drawable/ic_baseline_phone_iphone_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_user_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_add_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="@dimen/save_contact_user_image_size"
+        android:layout_marginTop="@dimen/save_contact_user_name_til_mrg_top"
+        android:background="@drawable/contact_list_bg_drawable"
+        android:text="@string/save_contacts_submit_button_text"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_contact_user_phone_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

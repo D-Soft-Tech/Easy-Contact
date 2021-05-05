@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_page_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/save_contact_heading_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:orientation="vertical"
+        android:paddingVertical="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/save_contact_heading_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="@string/profile_page_heading_tv"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/contact_list_heading_tv_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/profile_page_menu"
+                    android:layout_width="@dimen/save_contact_dec_phone_img_size"
+                    android:layout_height="@dimen/save_contact_dec_phone_img_size"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_baseline_more_vert_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profile_page_call_user"
+                    android:layout_width="@dimen/save_contact_dec_phone_img_size"
+                    android:layout_height="@dimen/save_contact_dec_phone_img_size"
+                    android:layout_marginStart="@dimen/profile_page_call_user_mrg_start"
+                    android:src="@drawable/ic_baseline_call_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.336"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_page_user_image_iv"
+                    android:layout_width="@dimen/save_contact_user_image_size"
+                    android:layout_height="@dimen/save_contact_user_image_size"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="@dimen/save_contact_user_image_margin_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/save_contact_usr_img_border_width"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/profile_page_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="@dimen/contact_list_heading_tv_text_size" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/profile_page_phone_icon"
+        android:layout_width="@dimen/profile_page_phone_num_phon_icon_iv"
+        android:layout_height="@dimen/profile_page_phone_num_phon_icon_iv"
+        android:layout_marginBottom="344dp"
+        android:src="@drawable/ic_baseline_phone_iphone_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile_page_user_phone_number_tv"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/profile_page_user_phone_number_tv"
+        android:layout_width="226dp"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="@dimen/save_contact_dec_phone_img_size"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="348dp"
+        android:textColor="@color/teal_700"
+        android:textSize="@dimen/contact_list_heading_tv_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">Decagon Android 007</string>
+    <string name="app_name">TestingSQLiteOnMyOwn</string>
+    <string name="tv_user_name">Name</string>
+    <string name="tv_usr_password">Password</string>
+    <string name="tv_confirm_password">Confirm Password</string>
+    <string name="sw_gender">Male</string>
+    <string name="tv_gender_female">Female</string>
+    <string name="btn_view_all">View all</string>
+    <string name="btn_add_new">Save</string>
+    <string name="et_stack">Stack</string>
+    <string name="btn_req_permission">Permission</string>
+
+    <string name="permission_title">Permission is required for: </string>
+    <string name="image_permission_purpose">To set profile picture for your contact </string>
+    <string name="call_permission_purpose">Making Phone calls </string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="permission_denied">Permission denied</string>
+
+    <string name="contact_saved_toast">Contact Saved</string>
+    <string name="contact_not_saved_toast">Failed to Save</string>
+    <string name="phone_number_sv">Search</string>
+    <string name="contact_list_heading_tv">Add new contact</string>
+    <string name="profile_page_heading_tv">Details</string>
+    <string name="save_contact_user_name_et">Name</string>
+    <string name="save_contact_til_phone_number_hint">Number</string>
+    <string name="save_contacts_submit_button_text">Save</string>
+
+    <string name="profile_page_error_making_call">Invalid Phone number</string>
+    <string name="details_page_menu_option_share">Share</string>
+    <string name="details_page_menu_option_edit">Edit</string>
+    <string name="details_page_menu_option">Delete</string>
+
+    <string name="profile_page_delete_confirmation_dialog_title">Are You Sure?</string>
+    <string name="profile_page_delete_confirmation_dialog_body">You are about to permanently delete this phone number</string>
+    <string name="profile_page_delete_confirmation_dialog_ok">Yes, Proceed</string>
+    <string name="profile_page_delete_confirmation_dialog_cancel">No, Cancel</string>
+    <string name="go_to_contact_page">Phone Contacts</string>
 </resources>

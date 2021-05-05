@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "702699808992",
+    "firebase_url": "https://fir-new-47a9a-default-rtdb.firebaseio.com",
+    "project_id": "fir-new-47a9a",
+    "storage_bucket": "fir-new-47a9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702699808992:android:851b850bbada797075c885",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702699808992-f3jbb86bkh8k1vudknec0nh9r4o15dot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkdcgnNC2YPAEgmvREja3RG5IT1vK8mcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702699808992-f3jbb86bkh8k1vudknec0nh9r4o15dot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702699808992:android:0d5798f8c77ef2da75c885",
+        "android_client_info": {
+          "package_name": "ng.com.jedun.continousintegrationproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702699808992-f3jbb86bkh8k1vudknec0nh9r4o15dot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkdcgnNC2YPAEgmvREja3RG5IT1vK8mcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702699808992-f3jbb86bkh8k1vudknec0nh9r4o15dot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
