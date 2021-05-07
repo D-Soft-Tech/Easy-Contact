@@ -13,19 +13,7 @@ object Validator {
         return m.matches()
     }
 
-    fun emailValidation(email: String): Boolean {
-        var p: Pattern = Pattern.compile("^[a-zA-Z]+([\\w._]|(-))*\\w+(@)[a-z]+(.)[a-z]{3}$")
-        var m: Matcher = p.matcher(email)
-        return m.matches()
-    }
-
-    fun genderValidation(text: String): Boolean {
-        return text == "Male" || text == "Female"
-    }
-
     fun userNameValidation(text: String): Boolean {
-        var p: Pattern = Pattern.compile("^([a-zA-Z])[a-z]{2}[a-z]*$")
-        var m: Matcher = p.matcher(text)
-        return m.matches()
+        return text.isNotEmpty()
     }
 }

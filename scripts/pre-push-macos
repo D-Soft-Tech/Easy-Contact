@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#echo "Checks Started"
+echo "Checks Started"
 
 # stash any unstaged changes
 #git stash -q --keep-index

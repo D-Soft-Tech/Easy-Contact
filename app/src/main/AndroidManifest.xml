@@ -13,8 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DecagonAndroid007">
+        <activity android:name="com.decagon.android.sq007.PhoneContactApp"></activity>
+        <activity android:name="com.decagon.android.sq007.SaveNewAndEditPage" />
+        <activity android:name="com.decagon.android.sq007.ProfilePage" />
         <activity android:name="com.decagon.android.sq007.MainActivity">
-            <intent-filter>
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

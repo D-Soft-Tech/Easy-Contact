@@ -1,5 +1,9 @@
 package com.decagon.android.sq007
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -7,10 +11,14 @@ import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagon.android.sq007.databinding.ActivityMainBinding
 import com.google.firebase.database.*
+
+
+const val CHANNEL_ID = "123"
 
 class MainActivity :
     AppCompatActivity(),
@@ -57,38 +65,6 @@ class MainActivity :
             startActivity(intent)
         }
 
-        // getting reference to views
-//        var name = binding.etUserName
-//        var phone = binding.etUserPassword
-//        var save = binding.btnAddNew
-//
-//        //Sending data to database
-//        save.setOnClickListener() {
-//            if (name.text.isNotEmpty() && phone.text.isNotEmpty()) {
-//
-//                //Unique identifier for each row
-//                var id = databaseReference.push().key
-//
-//                var data = QuickData(id, name.text.toString(), phone.text.toString())
-//
-//                try {
-//                    databaseReference.child(id.toString()).setValue(data)
-//                    Toast.makeText(this, R.string.contact_saved_toast, Toast.LENGTH_SHORT).show()
-//                } catch (e: Error) {
-//                    Toast.makeText(this, R.string.contact_not_saved_toast, Toast.LENGTH_SHORT).show()
-//                }
-//
-//            } else {
-//                if (name.text.isEmpty()) name.setError("Please Enter a name")
-//                if (phone.text.isEmpty()) phone.setError("Please enter a phone number")
-//            }
-//        }
-
-        // RecyclerView adapter for the contacts i load from my phone
-//        var contactListRecyclerView = findViewById<RecyclerView>(R.id.contact_list_rv)
-//        contactListRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-//        contactListRecyclerView.adapter = ContactListAdapter(contactItems, this)
-
         // RecyclerView adapter for contacts from firebase
         contactFromFirebaseListRecyclerView = findViewById(R.id.item_from_database_rv)
         contactFromFirebaseListRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
@@ -120,7 +96,8 @@ class MainActivity :
                 if (snapshot.exists()) {
                     // clear the list first before adding to it
                     contactReturned.clear()
-
+//                    Toast.makeText(this@MainActivity, "Hey new Data is availaible", Toast.LENGTH_LONG).show()
+                    createNotification()
                     for (h in snapshot.children) {
                         var eachData = h.getValue(UserModel::class.java)
 
@@ -136,6 +113,32 @@ class MainActivity :
                 }
             }
         })
+    }
+
+    //Notification Creator
+    private fun createNotification() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = getString(R.string.channel_name)
+            val descriptionText = getString(R.string.channel_description)
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
+                description = descriptionText
+            }
+
+            // Register the channel with the system
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+
+            //Notification Buiilder
+            val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.common_full_open_on_phone)
+                .setContentTitle(getString(R.string.notification_title))
+                .setContentText(getString(R.string.notification_content))
+                .setAutoCancel(true)
+
+            notificationManager.notify(0, builder.build())
+        }
     }
 
 //    override fun onRecyclerItemClicked(name : String) {

@@ -164,7 +164,9 @@ class PhoneContactApp :
                 .show {
                     title(R.string.permission_title)
                     message(R.string.image_permission_purpose)
-                    negativeButton { cancel() }
+                    negativeButton {
+                        finish()
+                    }
                     positiveButton {
                         requestPermissions(permissionsToAsk, storage_permission_code)
                     }
@@ -187,6 +189,7 @@ class PhoneContactApp :
                 readContact(null, null, contactItems)
             } else {
                 Toast.makeText(this, R.string.permission_denied, Toast.LENGTH_LONG).show()
+                finish()
             }
         }
     }

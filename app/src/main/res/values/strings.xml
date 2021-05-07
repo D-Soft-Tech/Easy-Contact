@@ -11,7 +11,7 @@
     <string name="btn_req_permission">Permission</string>
 
     <string name="permission_title">Permission is required for: </string>
-    <string name="image_permission_purpose">To set profile picture for your contact </string>
+    <string name="image_permission_purpose">To load the contacts of your phone so that you can make call</string>
     <string name="call_permission_purpose">Making Phone calls </string>
     <string name="permission_granted">Permission granted</string>
     <string name="permission_denied">Permission denied</string>
@@ -35,4 +35,10 @@
     <string name="profile_page_delete_confirmation_dialog_ok">Yes, Proceed</string>
     <string name="profile_page_delete_confirmation_dialog_cancel">No, Cancel</string>
     <string name="go_to_contact_page">Phone Contacts</string>
+
+<!--    Notification-->
+    <string name="notification_title">First Notification</string>
+    <string name="notification_content">Hey! We noticed some changes made to your Firebase database</string>
+    <string name="channel_name">Dynamic Tech</string>
+    <string name="channel_description">Dynamic Soft Technology! Tech Solutions at your doorstep</string>
 </resources>
